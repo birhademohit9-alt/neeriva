@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEERIVA Awesome Aqua | Factory Contact</title>
+<style>
+:root{--green:#064b2f;--light:#f5faf7;--line:#d9e7df;--text:#183027;}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text)}
+.wrap{max-width:760px;margin:auto;background:white;min-height:100vh}
+.hero{background:linear-gradient(145deg,#043c27,#087447);color:white;padding:34px 22px;text-align:center}
+.hero h1{margin:0 0 8px;font-size:32px} .hero p{margin:0;opacity:.92}
+.content{padding:22px} .card{border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+h2{color:var(--green);margin-top:0;font-size:21px} .address{line-height:1.55}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.btn{display:block;text-align:center;text-decoration:none;padding:14px 12px;border-radius:12px;font-weight:700;border:1px solid var(--green);color:var(--green)}
+.btn.primary{background:var(--green);color:white} .photo{width:100%;border-radius:14px;display:block;margin-top:12px}
+.small{font-size:13px;color:#587066;line-height:1.5}
+footer{text-align:center;padding:20px;color:#587066;font-size:13px}
+@media(max-width:520px){.btns{grid-template-columns:1fr}.hero h1{font-size:28px}}
+</style>
+</head>
+<body><main class="wrap">
+<section class="hero">
+<h1>💧 NEERIVA Awesome Aqua</h1><p>Pure • Safe • Refreshing</p>
+</section>
+<div class="content">
+<section class="card">
+<h2>Factory Contact</h2>
+<div class="address"><b>📍 Registered / Factory Address</b><br>7/2/3, Behind Kashinath Lodge, Ajanta Road, MIDC-425003, Jalgaon, Maharashtra, India</div>
+<div class="btns">
+<a class="btn primary" href="https://maps.google.com/maps?q=20.9944327%2C75.5839558&z=17&hl=en" target="_blank">🗺️ Get Directions</a>
+<a class="btn" href="tel:+918446248447">📞 Call 8446248447</a>
+<a class="btn primary" href="https://wa.me/918446248447?text=Hello%2C%20I%20found%20NEERIVA%20Awesome%20Aqua%20through%20your%20QR%20code.%20I%20would%20like%20to%20enquire%20about%20your%20packaged%20drinking%20water%20products." target="_blank">💬 WhatsApp Us</a>
+<a class="btn" href="mailto:info@awesomeaqua.com">✉️ Email Us</a>
+</div>
+</section>
+
+<section class="card">
+<h2>About Our Factory</h2>
+<p class="small">Explore our packaged drinking water manufacturing facility and production setup.</p>
+<img class="photo" src="images/neeriva_2.jpg" alt="NEERIVA factory overview">
+</section>
+
+<section class="card">
+<h2>Our Product</h2>
+<img class="photo" src="images/neeriva_3.jpg" alt="NEERIVA Awesome packaged drinking water">
+</section>
+
+
+<section class="card">
+<h2>⭐ Customer Feedback</h2>
+<p class="small">We value your feedback. Tell us about your experience with NEERIVA Awesome Aqua.</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin:14px 0">
+  <button type="button" class="btn" onclick="setRating(1)">★</button>
+  <button type="button" class="btn" onclick="setRating(2)">★★</button>
+  <button type="button" class="btn" onclick="setRating(3)">★★★</button>
+  <button type="button" class="btn" onclick="setRating(4)">★★★★</button>
+  <button type="button" class="btn" onclick="setRating(5)">★★★★★</button>
+</div>
+<input id="feedbackName" type="text" placeholder="Your name (optional)"
+style="width:100%;padding:13px;border:1px solid #d9e7df;border-radius:10px;margin-bottom:10px">
+<textarea id="feedbackText" placeholder="Write your feedback..."
+style="width:100%;min-height:100px;padding:13px;border:1px solid #d9e7df;border-radius:10px;resize:vertical"></textarea>
+<div class="btns">
+<button class="btn primary" type="button" onclick="sendFeedback()">📲 Submit Feedback</button>
+<a class="btn" href="https://wa.me/918446248447" target="_blank">💬 Feedback on WhatsApp</a>
+</div>
+<p id="feedbackStatus" class="small" style="margin-top:12px"></p>
+</section>
+
+<section class="card" id="reward">
+<h2>🎁 Offer / Lucky Reward</h2>
+<p class="small">Thank you for choosing NEERIVA. Try your luck and reveal today's customer reward.</p>
+<button class="btn primary" style="width:100%;margin-top:10px" type="button" onclick="tryReward()">🎉 Try Your Lucky Reward</button>
+<div id="rewardResult" style="display:none;text-align:center;margin-top:18px;padding:18px;border-radius:14px;background:#f5faf7;border:1px dashed #064b2f">
+  <div style="font-size:28px">🎁</div>
+  <div id="couponCode" style="font-size:22px;font-weight:800;color:#064b2f;margin:8px 0"></div>
+  <div id="couponText" class="small"></div>
+  <button class="btn" style="margin-top:12px" type="button" onclick="shareCoupon()">📲 Share Coupon on WhatsApp</button>
+</div>
+</section>
+
+<section class="card">
+<h2>Company Information</h2>
+<p class="small"><b>Email:</b> info@awesomeaqua.com<br><b>Website:</b> https://awesomeaqua.com<br><b>WhatsApp:</b> +91 8446248447</p>
+</section>
+</div>
+<footer>AWESOME AQUA MINERAL • PURE & TRUSTED HYDRATION</footer>
+</main>
+<script>
+let selectedRating = 0;
+let currentCoupon = "";
+
+function setRating(n) {
+  selectedRating = n;
+  document.querySelectorAll('#feedbackText').forEach(el => {});
+  document.getElementById('feedbackStatus').textContent = "Rating selected: " + "★".repeat(n);
+}
+
+function sendFeedback() {
+  const name = document.getElementById('feedbackName').value.trim() || "Customer";
+  const text = document.getElementById('feedbackText').value.trim();
+  if (!selectedRating) {
+    document.getElementById('feedbackStatus').textContent = "Please select a star rating.";
+    return;
+  }
+  if (!text) {
+    document.getElementById('feedbackStatus').textContent = "Please write a short feedback message.";
+    return;
+  }
+  const msg = "NEERIVA Customer Feedback%0A%0AName: " + encodeURIComponent(name) +
+    "%0ARating: " + encodeURIComponent("★".repeat(selectedRating)) +
+    "%0AFeedback: " + encodeURIComponent(text);
+  window.open("https://wa.me/918446248447?text=" + msg, "_blank");
+  document.getElementById('feedbackStatus').textContent =
+    "Thank you! WhatsApp has been opened to send your feedback.";
+}
+
+function tryReward() {
+  const rewards = [
+    ["NEERIVA10", "10% OFF on your next eligible purchase."],
+    ["NEERIVA5", "₹5 OFF on your next eligible purchase."],
+    ["LUCKY25", "₹25 OFF on your next eligible purchase."],
+    ["NEERIVA-GIFT", "Lucky Gift — ask our team for today's reward."],
+    ["THANKYOU", "Special thank-you reward from NEERIVA."]
+  ];
+  const r = rewards[Math.floor(Math.random() * rewards.length)];
+  currentCoupon = r[0];
+  document.getElementById("couponCode").textContent = "Coupon: " + r[0];
+  document.getElementById("couponText").textContent = r[1] + " Terms may apply.";
+  document.getElementById("rewardResult").style.display = "block";
+}
+
+function shareCoupon() {
+  if (!currentCoupon) return;
+  const msg = "Hello NEERIVA Awesome Aqua! I received the Lucky Reward coupon " +
+    currentCoupon + " through your QR code.";
+  window.open("https://wa.me/918446248447?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
+
+</body></html>
